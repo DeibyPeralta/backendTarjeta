@@ -12,11 +12,26 @@ namespace backendTarjeta.Controllers
     [ApiController]
     public class tarjetaControles : ControllerBase
     {
+        private readonly aplicationDBContext _dbContext;
+
+        //creo controlador
+        public tarjetaControles( aplicationDBContext context )
+        {
+            _dbContext = context;
+        }
+
         // GET: api/<tarjetaControles>
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
         // GET api/<tarjetaControles>/5
