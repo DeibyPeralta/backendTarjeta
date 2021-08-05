@@ -2,12 +2,12 @@
 
 namespace backendTarjeta.Migrations
 {
-    public partial class v100 : Migration
+    public partial class V100 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "tarjetaCrdito",
+                name: "tarjetaCredito",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -19,14 +19,14 @@ namespace backendTarjeta.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_tarjetaCrdito", x => x.Id);
+                    table.PrimaryKey("PK_tarjetaCredito", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "tarjetaCrdito");
+                name: "tarjetaCredito");
         }
     }
 }

@@ -9,8 +9,8 @@ using backendTarjeta;
 namespace backendTarjeta.Migrations
 {
     [DbContext(typeof(aplicationDBContext))]
-    [Migration("20210520135717_v1.0.0")]
-    partial class v100
+    [Migration("20210803200032_V1.0.0")]
+    partial class V100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,7 +45,7 @@ namespace backendTarjeta.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tarjetaCrdito");
+                    b.ToTable("tarjetaCredito");
                 });
 #pragma warning restore 612, 618
         }

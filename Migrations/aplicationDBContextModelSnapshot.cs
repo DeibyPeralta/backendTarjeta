@@ -43,7 +43,7 @@ namespace backendTarjeta.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tarjetaCrdito");
+                    b.ToTable("tarjetaCredito");
                 });
 #pragma warning restore 612, 618
         }
