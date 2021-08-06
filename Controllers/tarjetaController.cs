@@ -15,9 +15,9 @@ namespace backendTarjeta.Controllers
         private readonly aplicationDBContext _dbContext;
 
         //creo controlador
-        public tarjetaController( aplicationDBContext context )
+        public tarjetaController( aplicationDBContext _context )
         {
-            _dbContext = context;
+            _dbContext = _context;
         }
 
         // GET: api/<tarjetaControles>
@@ -25,9 +25,8 @@ namespace backendTarjeta.Controllers
         public async Task<IActionResult> Get()
         {
             try
-            { //await espere a unos instantes
-                var listTarjetas = await _dbContext.tarjetaCredito.ToListAsync();
-                //return Ok(await Task.FromResult(listTarjetas));
+            {   //await espere a unos instantes
+                var listTarjetas = await _dbContext.TarjetaCredito.ToListAsync();
                 return Ok(listTarjetas);
             }
             catch (Exception ex)
